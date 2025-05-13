@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names
+// ignore_for_file: constant_identifier_names, file_names
 
 import 'package:flutter/material.dart';
 
@@ -36,7 +36,7 @@ abstract class Styless {
   static const BodyBold = TextStyle(
     color: Colors.black,
     fontSize: 18,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w500,
   );
   static const BodySmallRegular = TextStyle(
     color: Colors.black,
