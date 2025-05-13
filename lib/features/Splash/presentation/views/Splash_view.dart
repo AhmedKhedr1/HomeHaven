@@ -1,8 +1,9 @@
 // ignore_for_file: file_names
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:homehaven/feature/views/Onboarding_view.dart';
-import 'package:homehaven/feature/widgets/SplashViewBody.dart';
+import 'package:go_router/go_router.dart';
+import 'package:homehaven/core/utils/Approuter.dart';
+import 'package:homehaven/features/Splash/presentation/Widgets/SplashViewBody.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -16,12 +17,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => OnboardingView(),
-        ),
-      );
+      GoRouter.of(context).push(Approuter.KonboardingView);
     });
   }
 

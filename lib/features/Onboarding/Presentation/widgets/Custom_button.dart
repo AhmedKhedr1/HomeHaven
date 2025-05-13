@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+   CustomButton({super.key,required this.onPressed});
+void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return TextButton(
@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
           horizontal: 149,
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         'Next',
         style: TextStyle(color: Colors.white, fontSize: 18),
