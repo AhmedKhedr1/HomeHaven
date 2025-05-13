@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homehaven/core/utils/Approuter.dart';
-import 'package:homehaven/features/Onboarding/Presentation/widgets/Custom_button.dart';
+import 'package:homehaven/core/utils/Assets.dart';
+import 'package:homehaven/core/widgets/Custom_button.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({
@@ -14,7 +15,7 @@ class OnBoardingViewBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Image.asset(
-          'assets/images/onboarding1.png',
+          Assets.onboarding1,
           fit: BoxFit.cover,
           width: double.infinity,
         ),
@@ -40,10 +41,14 @@ class OnBoardingViewBody extends StatelessWidget {
         SizedBox(
           height: 74,
         ),
-        CustomButton(
-          onPressed: () {
-            GoRouter.of(context).push(Approuter.KLoginView);
-          },
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: CustomButton(
+            onPressed: () {
+              GoRouter.of(context).push(Approuter.KLoginView);
+            },
+            textbutton: 'Next',
+          ),
         )
       ],
     );

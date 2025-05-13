@@ -1,6 +1,7 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:homehaven/core/utils/Assets.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({
@@ -24,7 +25,7 @@ class SplashViewBody extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset('assets/images/Homeicon.svg'),
+          SvgPicture.asset(Assets.homeIcon),
           SizedBox(
             height: 16,
           ),
