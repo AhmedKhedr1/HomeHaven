@@ -10,4 +10,5 @@ abstract class Assets {
   static const String GoogleIcon = 'assets/images/Google icon.png';
   static const String PasswordIcon = 'assets/images/Password icon.png';
   static const String SuffixIcon = 'assets/images/suffixIcon.png';
+  static const String personicon = 'assets/images/person icon.png';
 }
