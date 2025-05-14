@@ -11,4 +11,12 @@ abstract class Assets {
   static const String PasswordIcon = 'assets/images/Password icon.png';
   static const String SuffixIcon = 'assets/images/suffixIcon.png';
   static const String personicon = 'assets/images/person icon.png';
+  static const String Staricon = 'assets/images/Star_icon.png';
+  static const String Searchicon = 'assets/images/Search_icon.png';
+  static const String Notificationicon = 'assets/images/Notification_icon.png';
+  static const String loveicon = 'assets/images/love-icon.png';
+  static const String Locationicon = 'assets/images/Location_icon.png';
+  static const String downicon = 'assets/images/down-icon.png';
+  static const String carticon = 'assets/images/cart-icon.png';
+  static const String cameraicon = 'assets/images/camera_icon.png';
 }
