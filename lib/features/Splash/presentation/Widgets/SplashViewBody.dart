@@ -25,7 +25,7 @@ class SplashViewBody extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(Assets.homeIcon),
+          SvgPicture.asset(Assets.homeIconsSvg),
           SizedBox(
             height: 16,
           ),
