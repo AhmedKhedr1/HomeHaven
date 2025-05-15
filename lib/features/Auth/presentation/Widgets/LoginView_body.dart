@@ -15,7 +15,7 @@ class LoginviewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  ListView(
+    return ListView(
       children: [
         SafeArea(
           child: Padding(
@@ -66,7 +66,9 @@ class LoginviewBody extends StatelessWidget {
                   height: 24,
                 ),
                 CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push(Approuter.KhomeView);
+                  },
                   textbutton: 'Log in',
                 ),
                 SizedBox(
