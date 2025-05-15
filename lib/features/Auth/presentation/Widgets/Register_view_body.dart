@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homehaven/Constant.dart';
 import 'package:homehaven/core/utils/Assets.dart';
 import 'package:homehaven/core/utils/Styless.dart';
 import 'package:homehaven/core/widgets/Custom_TexField.dart';
@@ -75,7 +76,14 @@ class RegisterViewBody extends StatelessWidget {
           SizedBox(
             height: 24,
           ),
-          CustomButton(onPressed: () {}, textbutton: 'Create Account'),
+          CustomButton(
+            onPressed: () {},
+            textbutton: 'Create Account',
+            width: double.infinity,
+            height: 34,
+            textcolor: Colors.white,
+            buttoncolor: KPrimaryColor,
+          ),
           SizedBox(
             height: 32,
           ),

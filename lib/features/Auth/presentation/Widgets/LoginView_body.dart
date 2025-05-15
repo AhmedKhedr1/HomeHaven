@@ -69,7 +69,7 @@ class LoginviewBody extends StatelessWidget {
                   onPressed: () {
                     GoRouter.of(context).push(Approuter.KhomeView);
                   },
-                  textbutton: 'Log in',
+                  textbutton: 'Log in', width: double.infinity, height: 34, textcolor: Colors.white, buttoncolor: KPrimaryColor,
                 ),
                 SizedBox(
                   height: 32,
