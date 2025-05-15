@@ -16,7 +16,7 @@ abstract class Styless {
   static const Heading3 = TextStyle(
     color: Colors.black,
     fontSize: 24,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w500,
   );
   static const Heading4 = TextStyle(
     color: Colors.black,
@@ -46,7 +46,7 @@ abstract class Styless {
   static const BodySmallBold = TextStyle(
     color: Colors.black,
     fontSize: 14,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w600,
   );
   static const Caption = TextStyle(
     color: Colors.black,

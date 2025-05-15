@@ -4,7 +4,7 @@ abstract class Assets {
   static const String onboarding1 = 'assets/images/onboarding1.png';
   static const String onboarding2 = 'assets/images/onboarding2.png';
   static const String onboarding3 = 'assets/images/onboarding3.png';
-  static const String homeIcon = 'assets/images/Homeicon.svg';
+  static const String homeIconsSvg = 'assets/images/Homeicon.svg';
   static const String EmailIcon = 'assets/images/Email icon.png';
   static const String FacebookIcon = 'assets/images/facebook icon.png';
   static const String GoogleIcon = 'assets/images/Google icon.png';
@@ -19,4 +19,9 @@ abstract class Assets {
   static const String downicon = 'assets/images/down-icon.png';
   static const String carticon = 'assets/images/cart-icon.png';
   static const String cameraicon = 'assets/images/camera_icon.png';
+  static const String home = 'assets/images/home.png';
+  static const String Homebanner = 'assets/images/homeBanner.png';
+  static const String chair1 = 'assets/images/item1.png';
+  static const String chair2 = 'assets/images/item2.png';
+  static const String item3 = 'assets/images/item3.png';
 }
