@@ -11,7 +11,7 @@ class Homeview extends StatelessWidget {
     return Scaffold(
       backgroundColor: KBackgroundColor,
       body: HomeviewBody(),
-      bottomNavigationBar: Bottom_navigation_bar(),
+      // bottomNavigationBar: Bottom_navigation_bar(),
     );
   }
 }
