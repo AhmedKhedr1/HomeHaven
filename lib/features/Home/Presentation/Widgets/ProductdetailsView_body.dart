@@ -32,7 +32,7 @@ class ProductdetailsviewBody extends StatelessWidget {
                 )
               ]),
           child: Column(
-            children: [Text('hello')],
+            children: [],
           ),
         )
       ],

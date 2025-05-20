@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 abstract class Assets {
   static const String onboarding1 = 'assets/images/onboarding1.png';
   static const String onboarding2 = 'assets/images/onboarding2.png';
@@ -22,4 +24,8 @@ abstract class Assets {
   static const String chair1 = 'assets/images/item1.png';
   static const String chair2 = 'assets/images/item2.png';
   static const String item3 = 'assets/images/item3.png';
+  static const String Thumbnail1 = 'assets/images/Thumbnail 1.png';
+  static const String Thumbnail2 = 'assets/images/Thumbnail 2.png';
+  static const String Thumbnail3 = 'assets/images/Thumbnail 3.png';
+  static const String disc = 'assets/images/Disc.png';
 }
