@@ -13,6 +13,7 @@ class HomeviewBody extends StatelessWidget {
       child: Column(
         children: [
           search_bar(),
+          
           SizedBox(
             height: 8,
           ),
