@@ -31,4 +31,7 @@ abstract class Assets {
   static const String user = 'assets/images/user.png';
   static const String Profile_BG = 'assets/images/Profile BG.png';
   static const String editicon = 'assets/images/edit-icon.png';
+  static const String transaction = 'assets/images/Transaction.png';
+  static const String savedicon = 'assets/images/savedicon.png';
+  static const String Paymenticon='assets/images/Paymenticon.png';
 }

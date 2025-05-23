@@ -1,7 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:homehaven/core/utils/Assets.dart';
 import 'package:homehaven/core/utils/Styless.dart';
+import 'package:homehaven/features/Account/Presentation/Widgets/User_info.dart';
 
 class ProfileBG extends StatelessWidget {
   const ProfileBG({
@@ -11,6 +11,7 @@ class ProfileBG extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      clipBehavior: Clip.none,
       children: [
         Image.asset(
           Assets.Profile_BG,
@@ -33,6 +34,7 @@ class ProfileBG extends StatelessWidget {
             ],
           ),
         ),
+        Positioned(left: 16, right: 16, top: 115, child: User_info())
       ],
     );
   }
