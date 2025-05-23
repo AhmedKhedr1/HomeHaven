@@ -28,4 +28,7 @@ abstract class Assets {
   static const String Thumbnail2 = 'assets/images/Thumbnail 2.png';
   static const String Thumbnail3 = 'assets/images/Thumbnail 3.png';
   static const String disc = 'assets/images/Disc.png';
+  static const String user = 'assets/images/user.png';
+  static const String Profile_BG = 'assets/images/Profile BG.png';
+  static const String editicon = 'assets/images/edit-icon.png';
 }

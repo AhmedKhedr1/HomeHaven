@@ -1,6 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:go_router/go_router.dart';
+import 'package:homehaven/features/Account/Presentation/Views/AccountView.dart';
 import 'package:homehaven/features/Auth/presentation/Views/Login_view.dart';
 import 'package:homehaven/features/Auth/presentation/Views/Register_view.dart';
 import 'package:homehaven/features/Home/Presentation/Views/HomeView.dart';
@@ -35,7 +36,7 @@ abstract class Approuter {
       ),
       GoRoute(
         path: KhomeView,
-        builder: (context, state) => Homeview(),
+        builder: (context, state) => Accountview(),
       ),
       GoRoute(
         path: KproductView,
