@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:homehaven/core/utils/Approuter.dart';
@@ -13,7 +12,7 @@ class onBoardingpageview extends StatefulWidget {
 }
 
 class _onBoardingpageviewState extends State<onBoardingpageview> {
-   final PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   int _currentPage = 0;
   List<OnboardingPageModel> items = [
     OnboardingPageModel(
@@ -35,37 +34,37 @@ class _onBoardingpageviewState extends State<onBoardingpageview> {
   @override
   Widget build(BuildContext context) {
     return PageView.builder(
-        controller: _pageController,
-        itemCount: items.length,
-        onPageChanged: (index) {
-          setState(() {
-            _currentPage = index;
-          });
-        },
-        itemBuilder: ((context, index) {
-          return OnBoardingViewBody(
-            onboardingPageModel: items[index],
-            currentPageIndex: _currentPage,
-            onNextPressed: () {
-              if (_currentPage < items.length - 1) {
-                _pageController.nextPage(
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              } else {
-                GoRouter.of(context).push(Approuter.KLoginView);
-              }
-            },
-            onBackPressed: _currentPage > 0
-                ? () {
-                    _pageController.previousPage(
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.easeInOut,
-                    );
-                  }
-                : null,
-          );
-        }),
-      );
+      controller: _pageController,
+      itemCount: items.length,
+      onPageChanged: (index) {
+        setState(() {
+          _currentPage = index;
+        });
+      },
+      itemBuilder: ((context, index) {
+        return OnBoardingViewBody(
+          onboardingPageModel: items[index],
+          currentPageIndex: _currentPage,
+          onNextPressed: () {
+            if (_currentPage < items.length - 1) {
+              _pageController.nextPage(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+              );
+            } else {
+              GoRouter.of(context).push(Approuter.KLoginView);
+            }
+          },
+          onBackPressed: _currentPage > 0
+              ? () {
+                  _pageController.previousPage(
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
+                }
+              : null,
+        );
+      }),
+    );
   }
 }

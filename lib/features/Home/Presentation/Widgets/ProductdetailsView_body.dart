@@ -4,10 +4,14 @@ import 'package:homehaven/core/utils/Styless.dart';
 import 'package:homehaven/features/Home/Presentation/Widgets/Color_Section.dart';
 import 'package:homehaven/features/Home/Presentation/Widgets/Productimage_Section.dart';
 import 'package:homehaven/features/Home/Presentation/Widgets/Rating_bar.dart';
+import 'package:homehaven/features/Home/data/models/ProductModel.dart';
 
 class ProductdetailsviewBody extends StatelessWidget {
-  const ProductdetailsviewBody({super.key});
-
+  const ProductdetailsviewBody({
+    super.key,
+    required this.productmodel,
+  });
+  final Productmodel productmodel;
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -15,7 +19,7 @@ class ProductdetailsviewBody extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
-        Productimage_Section(),
+        Productimage_Section(product: productmodel,),
         SizedBox(
           height: 16,
         ),
@@ -38,7 +42,9 @@ class ProductdetailsviewBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Product_Section(),
+              Product_Section(
+                productmodel: productmodel,
+              ),
               Divider(
                 height: 32,
               ),
@@ -58,7 +64,9 @@ class ProductdetailsviewBody extends StatelessWidget {
 class Product_Section extends StatelessWidget {
   const Product_Section({
     super.key,
+    required this.productmodel,
   });
+  final Productmodel productmodel;
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +79,7 @@ class Product_Section extends StatelessWidget {
             height: 16,
           ),
           Text(
-            'EKERÖ',
+            productmodel.name,
             style: Styless.BodyRegular,
           ),
           SizedBox(
@@ -80,14 +88,14 @@ class Product_Section extends StatelessWidget {
           Row(
             children: [
               Text(
-                r'$230.00',
+                '\$ ${productmodel.price}',
                 style: Styless.Heading2,
               ),
               SizedBox(
                 width: 8,
               ),
               Text(
-                r'$230.00',
+                '\$ ${productmodel.discprice}',
                 style: TextStyle(fontSize: 14),
               ),
               SizedBox(
@@ -99,7 +107,9 @@ class Product_Section extends StatelessWidget {
           SizedBox(
             height: 8,
           ),
-          Rating_bar(),
+          Rating_bar(
+            productmodel: productmodel,
+          ),
           SizedBox(
             height: 14,
           ),

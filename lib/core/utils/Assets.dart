@@ -33,5 +33,10 @@ abstract class Assets {
   static const String editicon = 'assets/images/edit-icon.png';
   static const String transaction = 'assets/images/Transaction.png';
   static const String savedicon = 'assets/images/savedicon.png';
-  static const String Paymenticon='assets/images/Paymenticon.png';
+  static const String Paymenticon = 'assets/images/Paymenticon.png';
+  static const String item4 = 'assets/images/item 4.png';
+  static const String Outdoor = 'assets/images/Outdoor.png';
+  static const String moreicon = 'assets/images/More Icon.png';
+  static const String Furniture = 'assets/images/Furniture.png';
+  static const String appliance = 'assets/images/electrical-appliance.png';
 }

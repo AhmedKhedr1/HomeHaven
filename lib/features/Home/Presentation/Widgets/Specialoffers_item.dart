@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:homehaven/core/utils/Assets.dart';
 import 'package:homehaven/core/utils/Styless.dart';
 import 'package:homehaven/features/Home/Presentation/Widgets/Rating_bar.dart';
+import 'package:homehaven/features/Home/data/models/ProductModel.dart';
 
 class Specialoffers_item extends StatelessWidget {
   const Specialoffers_item({
     super.key,
+    required this.productmodel,
   });
-
+  final Productmodel productmodel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,28 +21,30 @@ class Specialoffers_item extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
-            Assets.chair1,
+            productmodel.image,
             height: 150,
           ),
           SizedBox(
             height: 6,
           ),
           Text(
-            'EKERÖ',
+            productmodel.name,
             style: Styless.BodySmallRegular,
           ),
           SizedBox(
             height: 4,
           ),
           Text(
-            r'$230.00',
+            '\$ ${productmodel.price}',
             style: Styless.Heading4,
           ),
           Text(
-            r'$512.58',
+            '\$ ${productmodel.discprice}',
             style: TextStyle(fontSize: 12),
           ),
-          Rating_bar(),
+          Rating_bar(
+            productmodel: productmodel,
+          ),
         ],
       ),
     );

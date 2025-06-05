@@ -3,12 +3,14 @@
 import 'package:flutter/material.dart';
 import 'package:homehaven/Constant.dart';
 import 'package:homehaven/core/utils/Assets.dart';
+import 'package:homehaven/features/Home/data/models/ProductModel.dart';
 
 class Productimage_Section extends StatefulWidget {
   const Productimage_Section({
     super.key,
+    required this.product,
   });
-
+  final Productmodel product;
   @override
   State<Productimage_Section> createState() => _Productimage_SectionState();
 }
@@ -16,15 +18,16 @@ class Productimage_Section extends StatefulWidget {
 class _Productimage_SectionState extends State<Productimage_Section> {
   int selectedIndex = 0;
 
-  final List<String> thumbnails = [
-    Assets.chair1,
-    Assets.Thumbnail2,
-    Assets.Thumbnail3,
-  ];
+  late List<String> thumbnails;
   late String selectedImage;
   void initState() {
     super.initState();
-    selectedImage = thumbnails[0];
+    selectedImage = widget.product.image;
+    thumbnails = [
+      widget.product.image, // ← الصورة الأساسية
+      Assets.Thumbnail2,
+      Assets.Thumbnail3,
+    ];
   }
 
   @override
@@ -85,14 +88,18 @@ class image_box extends StatelessWidget {
       height: 65,
       width: 65,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(8),
         border: Border.all(
-            width: 1.5, color: isselected ? KPrimaryColor : Colors.white),
+            width: 2.2, color: isselected ? KPrimaryColor : Colors.white),
       ),
-      child: Image.asset(
-        image,
-        height: 50,
-        width: 50,
+      child: Padding(
+        padding: const EdgeInsets.all(4),
+        child: Image.asset(
+          image,
+          fit: BoxFit.cover,
+          height: 45,
+          width: 45,
+        ),
       ),
     );
   }

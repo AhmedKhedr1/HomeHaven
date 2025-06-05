@@ -61,8 +61,8 @@ class AccountviewBody extends StatelessWidget {
                   style: Styless.BodyBold,
                 ),
                 buildListTile(
-                  leading: Assets.PasswordIcon,
-                  title: 'Security',
+                  leading: Assets.personicon,
+                  title: 'Get in Touch With Us',
                 ),
               ],
             ),
